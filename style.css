@@ -9,17 +9,22 @@ h3 {
     margin: 0;
 }
 
-.fiche-personnage {
+.sheets {
+    font-family: sans-serif;
+}
+
+.character-sheet,
+.secondary-sheet {
     width: 210mm;
     height: 297mm;
-    background-color: #fff;
     border: 1px solid black;
     margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box;
+}
+
+.character-sheet {
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
     gap: 20px;
 }
 
@@ -41,10 +46,6 @@ caption {
     padding: 3px 6px;
 }
 
-th {
-    padding: 3px 6px;
-}
-
 th,
 td {
     height: 1em;
@@ -54,6 +55,8 @@ th {
     background-color: #000;
     color: #fff;
     font-weight: normal;
+    text-align: center;
+    padding: 3px 6px;
 }
 
 td > input {
@@ -224,10 +227,6 @@ input[type="number"] {
     width: 30px;
 }
 
-.competences th {
-    text-align: center;
-}
-
 .secondary-profile {
     display: flex;
 }
@@ -247,7 +246,6 @@ input[type="number"] {
 }
 
 .weapons th {
-    text-align: center;
     padding: 3px 0;
 }
 
@@ -289,4 +287,22 @@ input[type="number"] {
     display: flex;
     justify-content: space-between;
     padding: 3px 6px;
+}
+
+.secondary-sheet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    gap: 10px;
+}
+
+.lore {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.lore textarea {
+    width: 100%;
+    height: 280px;
+    box-sizing: border-box;
 }
